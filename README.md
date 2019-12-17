@@ -40,7 +40,7 @@ a.	For the par of speech, we can first check whether character ‘-‘ is in lin
 
 b.	For the example sentence, we can first select those lines without the appearance of a ‘-‘. However, as I add new lines before each single dot, the serial number would also be selected out. Hence, we can check the membership of numbers. Also, as numbers can also exist in example sentences, we use Regex again to only match ‘a digit and a single dot’, which is the format of the serial number.
 <br>![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/slice_2.png)
-<br>![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/slice_2.png)
+<br>![image does not exist](https://github.com/vivizhao95/images_readme/blob/master/Regex_2.png)
 
 7)	Assign key and value
 
