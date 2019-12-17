@@ -8,19 +8,46 @@ Firstly, I would like to provide a brief description of my project. This project
 
 The breakdown interpretation will be given as follows.
 
-1)	Import the text file.
-Here, we use open() function to read the file into Python.
+1)	Import the text file and some useful package.
+
+a. import re and csv
+![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/import.png)
+
+b. Here, we use open() function to read the file into Python.
+![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/read_file.png)
 
 2)	Tidy the text file.
+
 a.	Format all the sentences to '1. Word; POS tagging – meaning. sentence of example.'
+![image does not exist]()
+
 b.	My purpose was to extract different parts out and combine them, so I chose to add new lines before all the full stops. (each part was separated by a ‘.’)
+![image does not exist]()
+
 c.	In the list of lines that I got, there are still some empty lines. Therefore, I used for loop to delete all the empty lines. First step was to replace the newlines with empty strings. Next was to use if statement to check if the line is empty or not. Also, the title with string ‘SAT’ or ‘vocabulary’ should also be deleted, since I want a whole list of words instead of several lists of words.
+![image does not exist]()
+
 3)	Extract the key, which is the serial number and the words follows, by using Regex to compile a word and number.
+![image does not exist]()
+
 4)	Delete some redundant characters in the word list.
+![image does not exist]()
+
 5)	Re-organize all the words by giving them new serial numbers.
+![image does not exist]()
+
 6)	Slice different parts out.
+
 a.	For the par of speech, we can first check whether character ‘-‘ is in lines or not. If the line has ‘-‘, then the part of speech would be start from ‘;’ and ends before the first appearance of a single dot. Although the indexed line may have two dots, the index function will return the position of the character’s first appearance. Also, the meaning part would be start from the first appearance of a single dot to the end of the line.
+![image does not exist]()
+
 b.	For the example sentence, we can first select those lines without the appearance of a ‘-‘. However, as I add new lines before each single dot, the serial number would also be selected out. Hence, we can check the membership of numbers. Also, as numbers can also exist in example sentences, we use Regex again to only match ‘a digit and a single dot’, which is the format of the serial number.
+![image does not exist]()
+
 7)	Assign key and value
+
 a.	Zip all the values. This step is to make all the corresponding elements in three lists (part_of_speech_list, meaning_list and eg_sentence_list) into tuples.
+![image does not exist]()
+
 8)	Write the dictionary out to a csv file.
+![image does not exist]()
