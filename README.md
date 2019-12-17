@@ -11,10 +11,10 @@ The breakdown interpretation will be given as follows.
 1)	Import the text file and some useful package.
 
 a. import re and csv
-![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/import.png)
+<br>![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/import.png)
 
 b. Here, we use open() function to read the file into Python.
-![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/read_file.png)
+<br>![image does not exist](https://raw.githubusercontent.com/vivizhao95/images_readme/master/read_file.png)
 
 2)	Tidy the text file.
 
